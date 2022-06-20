@@ -23,16 +23,17 @@ function App() {
   }
   return (
     <div className="App">
-      <h2>Stopwatch - React</h2>
-      <br />
-      <hr/>
+      
       <h2>Regulator</h2>
       <h2>Counter : {count}</h2>
       <button onClick={regulatorFunc}>Increment</button>
       <button onClick={regulatorFunc}>Decrement</button>
       <button onClick={regulatorFunc}>Reset</button>
       <button onClick={regulatorFunc}>Multiply by 2</button>
-
+      <br />
+      <hr/>
+      <h2>Stopwatch - React</h2>
+      
     </div>
   )
 }
