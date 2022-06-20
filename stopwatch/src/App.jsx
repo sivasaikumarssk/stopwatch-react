@@ -5,39 +5,34 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const regulatorFunc = (e)=>{
+    let {innerText} = e.target;
+    if(innerText === "Increment"){
+      setCount((el) => el+1);
+
+    }
+    if(innerText === "Decrement"){
+      setCount((el) => el - 1 );
+    }
+    if(innerText === "Reset"){
+      setCount(0)
+    }
+    if(innerText === "Multiply by 2"){
+      setCount((el) => el *2 );
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <h2>Stopwatch - React</h2>
+      <br />
+      <hr/>
+      <h2>Regulator</h2>
+      <h2>Counter : {count}</h2>
+      <button onClick={regulatorFunc}>Increment</button>
+      <button onClick={regulatorFunc}>Decrement</button>
+      <button onClick={regulatorFunc}>Reset</button>
+      <button onClick={regulatorFunc}>Multiply by 2</button>
+
     </div>
   )
 }
