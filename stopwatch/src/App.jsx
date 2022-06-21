@@ -3,6 +3,9 @@ import logo from './logo.svg'
 import './App.css'
 import { useEffect } from 'react';
 import {Regulator } from "./components/Regulator"
+import {Timer} from "./components/Stoptimer"
+
+
 function App() {
 
   const [toggle,setToggle] = useState(true)
@@ -30,6 +33,7 @@ function App() {
       {toggle ? (
         <div>
           <Regulator/>
+          <Timer/>
         </div>
       ):(
         <div>
