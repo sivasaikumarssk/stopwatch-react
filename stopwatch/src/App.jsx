@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-     <button onClick={()=> setToggle(!toggle)}>Toggle</button>
+     <button onClick={()=> setToggle(!toggle)}>{toggle? "stopwatch" : "regulator"}</button>
       {toggle ? (
         <div>
           <Regulator/>
